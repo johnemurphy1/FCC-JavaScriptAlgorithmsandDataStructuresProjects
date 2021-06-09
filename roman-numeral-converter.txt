@@ -1,0 +1,23 @@
+ 
+  let romNum = new Array();
+  romNum = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+         let decNumber = new Array();
+         decNumber = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+         function convertToRoman(value) {
+            if (value <= 0 || value >= 4000)
+               return value;
+               let romanNumeral = "";
+            for (var i = 0; i<romNum.length; i++) {
+               while (value >= decNumber[i]) {
+                  value -= decNumber[i];
+                  romanNumeral += romNum[i];
+               }
+            }
+            return romanNumeral;
+         }
+ 
+ 
+ 
+ 
+ 
+convertToRoman(36);
