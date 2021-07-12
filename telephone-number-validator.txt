@@ -1,0 +1,31 @@
+
+  //if space remove
+  //if - remove
+  //if () remove
+  //check if 10 or 11 length
+function telephoneCheck(str) {
+//console.log(telephoneCheck(str));
+const telRegEx = [
+  
+ //555-555-5555
+ /^\d{3}-\d{3}-\d{4}$/,
+ //1 555 555 5555
+ /^1 \d{3}-\d{3}-\d{4}$/, 
+ //(555)555-5555
+ /^1 \(\d{3}\)\s\d{3}-\d{4}$/,
+ //5555555555
+ /^\d{10}$/,
+ //(555)555-5555
+ /^\(\d{3}\)\s?\d{3}-\d{4}$/,
+ //1(555)555-5555
+ /^1\(\d{3}\)\s?\d{3}-\d{4}$/,
+ //1 555 555 5555
+ /^1 \d{3}\s?\d{3}\s?\d{4}$/
+
+
+
+]
+  
+return telRegEx.some((pattern) => pattern.test(str));
+}
+
